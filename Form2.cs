@@ -23,7 +23,8 @@ namespace FamilyLifePlan
         public String agent;
         public int balance, cbi, quota, inst=1,age=0, orNo,colDue,colAdv, paid;
         public string date = DateTime.Now.ToShortDateString();
-        
+        public Byte by;
+        BindingSource bs = new BindingSource();
         public int getPaid
         { 
             get 
@@ -42,8 +43,9 @@ namespace FamilyLifePlan
         public Form2()
         {
             InitializeComponent();
-
-            dataGridView1.Columns[0].Name = "Contract No.";
+      
+            bs.DataSource = collectionBindingSource;
+            dataGridView1.DataSource = bs;
             //SELECTION MODE
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.MultiSelect = false;
@@ -64,7 +66,7 @@ namespace FamilyLifePlan
                 }
             }
         }
-        public void Reload(int a, int b,int c)
+        public void Reload(int a, int b,int c, string d)
         {            
             switch (a)
             {
@@ -149,9 +151,9 @@ namespace FamilyLifePlan
             }
             string upd = " UPDATE Collection " +
                          " SET [Quota Com] = @QUOTA , [Quota nCom] = 0, CBI = @CBI , [Installment Duration] =@INS ," +
-                         " Aging = @AGE, Balance =@BAL, Tax = true";
+                         " Aging = @AGE, Balance =@BAL, Tax = true" +
+                         " WHERE(Collection.[Contract Number] LIKE '"+ d +"')";
             cmd = new OleDbCommand(upd, con);
-
             cmd.Parameters.AddWithValue("@QUOTA",quota);
             cmd.Parameters.AddWithValue("@CBI", cbi);
             cmd.Parameters.AddWithValue("@INS", inst);
@@ -172,6 +174,10 @@ namespace FamilyLifePlan
             }
         }
 
+        private void refreshData()
+        {
+            bs.ResetBindings(false);
+        }
         public void retrieve()
         {
     
@@ -284,8 +290,8 @@ namespace FamilyLifePlan
 
         private void btnRef_Click_1(object sender, EventArgs e)
         {
-            dataGridView1.Update();
-            dataGridView1.Refresh();
+            refreshData();
+
         }
 
 

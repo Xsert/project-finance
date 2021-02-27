@@ -347,7 +347,7 @@ namespace FamilyLifePlan
                         case 3: MessageBox.Show("DATA SUCCESSFULLY INSERTED!"); ; break;
                     }
                     
-                    frm.Reload(count,planType,contract);
+                    frm.Reload(count,planType,contract,contractNO);
                 }
                 con.Close();
             }
