@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ClientsDataSet1" targetNamespace="http://tempuri.org/ClientsDataSet11.xsd" xmlns:mstns="http://tempuri.org/ClientsDataSet11.xsd" xmlns="http://tempuri.org/ClientsDataSet11.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ClientLists" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ClientLists (Settings)" PropertyReference="ApplicationSettings.FamilyLifePlan.Properties.Settings.GlobalReference.Default.ClientLists" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CollectionTableAdapter" GeneratorDataComponentClassName="CollectionTableAdapter" Name="Collection" UserDataComponentName="CollectionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ClientLists (Settings)" DbObjectName="Collection" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Contract Number], Planholder, [TIN ID], Plan, [Effective Date], [Due Date], [Quota Com], [Quota nCom], CBI, [Installment Duration], Aging, Balance, Tax, [OR Number], [OR Date], [Collection Due], [Collection Advance] FROM Collection</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Contract Number" DataSetColumn="Contract Number" />
+              <Mapping SourceColumn="Planholder" DataSetColumn="Planholder" />
+              <Mapping SourceColumn="TIN ID" DataSetColumn="TIN ID" />
+              <Mapping SourceColumn="Plan" DataSetColumn="Plan" />
+              <Mapping SourceColumn="Effective Date" DataSetColumn="Effective Date" />
+              <Mapping SourceColumn="Due Date" DataSetColumn="Due Date" />
+              <Mapping SourceColumn="Quota Com" DataSetColumn="Quota Com" />
+              <Mapping SourceColumn="Quota nCom" DataSetColumn="Quota nCom" />
+              <Mapping SourceColumn="CBI" DataSetColumn="CBI" />
+              <Mapping SourceColumn="Installment Duration" DataSetColumn="Installment Duration" />
+              <Mapping SourceColumn="Aging" DataSetColumn="Aging" />
+              <Mapping SourceColumn="Balance" DataSetColumn="Balance" />
+              <Mapping SourceColumn="Tax" DataSetColumn="Tax" />
+              <Mapping SourceColumn="OR Number" DataSetColumn="OR Number" />
+              <Mapping SourceColumn="OR Date" DataSetColumn="OR Date" />
+              <Mapping SourceColumn="Collection Due" DataSetColumn="Collection Due" />
+              <Mapping SourceColumn="Collection Advance" DataSetColumn="Collection Advance" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ClientsDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ClientsDataSet1" msprop:Generator_UserDSName="ClientsDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Collection" msprop:Generator_TableClassName="CollectionDataTable" msprop:Generator_TableVarName="tableCollection" msprop:Generator_TablePropName="Collection" msprop:Generator_RowDeletingName="CollectionRowDeleting" msprop:Generator_RowChangingName="CollectionRowChanging" msprop:Generator_RowEvHandlerName="CollectionRowChangeEventHandler" msprop:Generator_RowDeletedName="CollectionRowDeleted" msprop:Generator_UserTableName="Collection" msprop:Generator_RowChangedName="CollectionRowChanged" msprop:Generator_RowEvArgName="CollectionRowChangeEvent" msprop:Generator_RowClassName="CollectionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Contract_x0020_Number" msprop:Generator_ColumnVarNameInTable="columnContract_Number" msprop:Generator_ColumnPropNameInRow="Contract_Number" msprop:Generator_ColumnPropNameInTable="Contract_NumberColumn" msprop:Generator_UserColumnName="Contract Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Planholder" msprop:Generator_ColumnVarNameInTable="columnPlanholder" msprop:Generator_ColumnPropNameInRow="Planholder" msprop:Generator_ColumnPropNameInTable="PlanholderColumn" msprop:Generator_UserColumnName="Planholder" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIN_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnTIN_ID" msprop:Generator_ColumnPropNameInRow="TIN_ID" msprop:Generator_ColumnPropNameInTable="TIN_IDColumn" msprop:Generator_UserColumnName="TIN ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Plan" msprop:Generator_ColumnVarNameInTable="columnPlan" msprop:Generator_ColumnPropNameInRow="Plan" msprop:Generator_ColumnPropNameInTable="PlanColumn" msprop:Generator_UserColumnName="Plan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Effective_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnEffective_Date" msprop:Generator_ColumnPropNameInRow="Effective_Date" msprop:Generator_ColumnPropNameInTable="Effective_DateColumn" msprop:Generator_UserColumnName="Effective Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Due_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnDue_Date" msprop:Generator_ColumnPropNameInRow="Due_Date" msprop:Generator_ColumnPropNameInTable="Due_DateColumn" msprop:Generator_UserColumnName="Due Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Quota_x0020_Com" msprop:Generator_ColumnVarNameInTable="columnQuota_Com" msprop:Generator_ColumnPropNameInRow="Quota_Com" msprop:Generator_ColumnPropNameInTable="Quota_ComColumn" msprop:Generator_UserColumnName="Quota Com" type="xs:int" minOccurs="0" />
+              <xs:element name="Quota_x0020_nCom" msprop:Generator_ColumnVarNameInTable="columnQuota_nCom" msprop:Generator_ColumnPropNameInRow="Quota_nCom" msprop:Generator_ColumnPropNameInTable="Quota_nComColumn" msprop:Generator_UserColumnName="Quota nCom" type="xs:int" minOccurs="0" />
+              <xs:element name="CBI" msprop:Generator_ColumnVarNameInTable="columnCBI" msprop:Generator_ColumnPropNameInRow="CBI" msprop:Generator_ColumnPropNameInTable="CBIColumn" msprop:Generator_UserColumnName="CBI" type="xs:int" minOccurs="0" />
+              <xs:element name="Installment_x0020_Duration" msprop:Generator_ColumnVarNameInTable="columnInstallment_Duration" msprop:Generator_ColumnPropNameInRow="Installment_Duration" msprop:Generator_ColumnPropNameInTable="Installment_DurationColumn" msprop:Generator_UserColumnName="Installment Duration" type="xs:int" minOccurs="0" />
+              <xs:element name="Aging" msprop:Generator_ColumnVarNameInTable="columnAging" msprop:Generator_ColumnPropNameInRow="Aging" msprop:Generator_ColumnPropNameInTable="AgingColumn" msprop:Generator_UserColumnName="Aging" type="xs:int" minOccurs="0" />
+              <xs:element name="Balance" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance" type="xs:int" minOccurs="0" />
+              <xs:element name="Tax" msprop:Generator_ColumnVarNameInTable="columnTax" msprop:Generator_ColumnPropNameInRow="Tax" msprop:Generator_ColumnPropNameInTable="TaxColumn" msprop:Generator_UserColumnName="Tax" type="xs:boolean" minOccurs="0" />
+              <xs:element name="OR_x0020_Number" msprop:Generator_ColumnVarNameInTable="columnOR_Number" msprop:Generator_ColumnPropNameInRow="OR_Number" msprop:Generator_ColumnPropNameInTable="OR_NumberColumn" msprop:Generator_UserColumnName="OR Number" type="xs:int" minOccurs="0" />
+              <xs:element name="OR_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnOR_Date" msprop:Generator_ColumnPropNameInRow="OR_Date" msprop:Generator_ColumnPropNameInTable="OR_DateColumn" msprop:Generator_UserColumnName="OR Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Collection_x0020_Due" msprop:Generator_ColumnVarNameInTable="columnCollection_Due" msprop:Generator_ColumnPropNameInRow="Collection_Due" msprop:Generator_ColumnPropNameInTable="Collection_DueColumn" msprop:Generator_UserColumnName="Collection Due" type="xs:int" minOccurs="0" />
+              <xs:element name="Collection_x0020_Advance" msprop:Generator_ColumnVarNameInTable="columnCollection_Advance" msprop:Generator_ColumnPropNameInRow="Collection_Advance" msprop:Generator_ColumnPropNameInTable="Collection_AdvanceColumn" msprop:Generator_UserColumnName="Collection Advance" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
